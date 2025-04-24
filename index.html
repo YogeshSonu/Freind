@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry, My Best Friend</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper.js CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper.js JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <style>
+        /* Custom Styles */
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Arial', sans-serif;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .heart-animation {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center text-gray-800">
+    <!-- Header -->
+    <header class="w-full text-center py-8">
+        <h1 class="text-4xl md:text-5xl font-bold text-pink-600">I'm Truly Sorry, To You</h1>
+        <p class="mt-4 text-lg md:text-xl text-gray-600">I Know I hurt you very much that is unforgottable</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto p-6">
+        <!-- Photo Slider -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-center mb-6">पर मेरी एक छोटी सी कोशिश आपको जितना परेशान किया उसको कम करने के लिए 🤌🧿</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <img src="images/Photo-5.jpg">
+                        <p class="text-center mt-2 text-gray-600"></p>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <img src="images/Photo-1.jpg">
+                        <p class="text-center mt-2 text-gray-600"></p>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <img src="images/Photo-3.jpg">
+                        <p class="text-center mt-2 text-gray-600"></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Photo-6.png">
+                        <p class="text-center mt-2 text-gray-600"></p>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <!-- Apology Message -->
+        <section class="bg-white rounded-lg shadow-lg p-8 text-center">
+            <h2 class="text-3xl font-semibold text-pink-600 mb-4">From the Bottom of My Heart</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                Dear Friend,<br><br>
+                I'm so sorry for any pain or misunderstanding I caused. I did not have any intention to hurt you. I hate that I let you down, and I promise to do better.All were happened due to My Overthinking and Misunderstanding. Please forgive me, and let's make more unforgettable moments together.
+            </p>
+            <p class="text-xl font-bold text-pink-600 heart-animation">I feel very apologize to you.</p>
+            <p class="text-xl font-bold text-pink-600 heart-animation">I Hope You Forgive me.</p>
+            <button onclick="alert('Thank you for reading my apology. I hope we can talk soon!')" class="mt-6 bg-pink-600 text-white px-6 py-3 rounded-full hover:bg-pink-700 transition">
+                Accept My Apology
+            </button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full text-center py-6 mt-8">
+        <p class="text-gray-600">पता नहीं कैसी लगी होगी आपको ये website पर मैंने रात को जाग के बनाई तो बताना जरूर कैसी लगी ??</p>
+        <p class="text-gray-600">Made with 💛 for you from Yogesh.</p>
+    </footer>
+
+    <!-- Swiper Initialization Script -->
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
+        });
+    </script>
+</body>
+</html>
